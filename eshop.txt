@@ -1,0 +1,18 @@
+The system shall enable the search text to be entered on the screen. 
+The system shall display all the matching products based on the search.
+The system possibly  notifies with a pop-up the user when no matching product is found on the search.
+The system shall allow a user to create his profile and set his credentials.
+The system shall authenticate user credentials to enter the profile.
+The system shall display the list of active and/or the list of completed orders in the customer profile.
+The system shall maintain customer email information as a required part of customer profile.
+The system shall send an order confirmation to the user through email.
+The system shall allow a user to add and remove products in the shopping cart.
+The system shall display various  shipping methods.
+The order shall be shipped to the client address or to an associated store, if the  click\&collect service is available. 
+The system shall enable the user to select the shipping method.
+The system may display the current tracking information about the order.
+The system shall display the available payment methods.
+The system shall allow the user to select the payment method for order.
+After delivery, the system may enable the users to enter their reviews or ratings.
+In order to publish the feedback on the purchases, the system needs to collect both reviews and ratings.
+The  click\&collect service excludes  the tracking information service.

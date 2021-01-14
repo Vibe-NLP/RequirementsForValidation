@@ -1,0 +1,95 @@
+ETCS shall provide the driver with information to allow him to drive the train safely. 
+
+ETCS shall be able to supervise train and shunting movements. 
+ETCS is required to be functional to a maximum train speed of 500 km/h. 
+
+ETCS active for limited train control function; trackside not fitted with any train control system or fitted with a train control system for which no STM is available onboard. 
+
+Basic track to train information via intermittent transmission media, e.g. balises. This information can be supported by infill, transmitted via balise, loop or radio. 
+
+Basic track to train and train to track information via continuous transmission media, i.e. radio. The train detection is provided by trackside. 
+
+Track to train information provided by national system. Onboard functions provided by national system (STM) in co-operation with onboard ETCS. 
+
+Trains equipped for ERTMS/ETCS application level 3 shall be able to run on lines equipped with ERTMS/ETCS application level 3, 2, 1 and 0, trains equipped for ERTMS/ETCS application level 2 shall be able to run on lines equipped with ERTMS/ETCS application level 2, 1 and 0 and trains equipped for ERTMS/ETCS application level 1 shall be able to run on lines equipped with ERTMS/ETCS application level 1 and 0. 
+
+The current application level shall be indicated on the DMI. 
+
+The driver shall acknowledge the level transitions, if requested from trackside. If the driver does not acknowledge after the transition the brake shall be applied. If the driver acknowledges afterwards, the brake can be released 
+
+ETCS shall be compatible with existing national systems listed in the CCS TSI such that it does not interfere with the national systems and is not interfered with by the national systems. 
+
+Any transition which occurs while the train is moving shall in principle occur automatically.
+
+Transitions which occur while the train is stationary, shall be initiated automatically or manually as appropriate. 
+
+If, as a result of an automatic transition, except for transitions to and from National Operation (STM), the responsibility for the driver increases, the ETCS shall seek an acknowledgement from the driver, whether the train is stationary or not. 
+
+For transitions to and from National Operation (STM) the ETCS shall request, an acknowledgement by the driver.
+
+In case the transition has to be acknowledged and the driver fails to acknowledge as required, the ETCS shall initiate a brake application 
+
+During the transition period between two operational states (including two different national operations) the supervision provided shall at least ensure the same protection provided by the least restrictive state. 
+
+If an ETCS equipped train passes a level transition to a line fitted with more than one level, the onboard shall switch to the highest level,   according to the priority given by trackside, for which it is equipped.
+
+If an ETCS equipped train passes a level transition to one or more levels for which it is not equipped, ETCS shall initiate a brake application.
+
+The current operational status shall be indicated to the driver on the DMI 
+
+The ETCS on-board shall be capable of receiving National values from the trackside to adapt to National requirements 
+
+National values shall be applicable to a defined area.
+
+Once received onboard the national values shall remain valid even if the onboard equipment is switched off.  
+
+If the on-board has no valid national values for the current location, default values shall be used by the onboard equipment.
+
+Default values shall be harmonised values, permanently stored in all ERTMS/ETCS on board equipment. ETCS shall provide the driver with information to allow him to drive the train safely. 
+
+ETCS shall be able to supervise train and shunting movements. 
+ETCS is required to be functional to a maximum train speed of 500 km/h. 
+
+ETCS active for limited train control function; trackside not fitted with any train control system or fitted with a train control system for which no STM is available onboard. 
+
+Basic track to train information via intermittent transmission media, e.g. balises. This information can be supported by infill, transmitted via balise, loop or radio. 
+
+Basic track to train and train to track information via continuous transmission media, i.e. radio. The train detection is provided by trackside. 
+
+Track to train information provided by national system. Onboard functions provided by national system (STM) in co-operation with onboard ETCS. 
+
+Trains equipped for ERTMS/ETCS application level 3 shall be able to run on lines equipped with ERTMS/ETCS application level 3, 2, 1 and 0, trains equipped for ERTMS/ETCS application level 2 shall be able to run on lines equipped with ERTMS/ETCS application level 2, 1 and 0 and trains equipped for ERTMS/ETCS application level 1 shall be able to run on lines equipped with ERTMS/ETCS application level 1 and 0. 
+
+The current application level shall be indicated on the DMI. 
+
+The driver shall acknowledge the level transitions, if requested from trackside. If the driver does not acknowledge after the transition the brake shall be applied. If the driver acknowledges afterwards, the brake can be released 
+
+ETCS shall be compatible with existing national systems listed in the CCS TSI such that it does not interfere with the national systems and is not interfered with by the national systems. 
+
+Any transition which occurs while the train is moving shall in principle occur automatically.
+
+Transitions which occur while the train is stationary, shall be initiated automatically or manually as appropriate. 
+
+If, as a result of an automatic transition, except for transitions to and from National Operation (STM), the responsibility for the driver increases, the ETCS shall seek an acknowledgement from the driver, whether the train is stationary or not. 
+
+For transitions to and from National Operation (STM) the ETCS shall request, an acknowledgement by the driver.
+
+In case the transition has to be acknowledged and the driver fails to acknowledge as required, the ETCS shall initiate a brake application 
+
+During the transition period between two operational states (including two different national operations) the supervision provided shall at least ensure the same protection provided by the least restrictive state. 
+
+If an ETCS equipped train passes a level transition to a line fitted with more than one level, the onboard shall switch to the highest level,   according to the priority given by trackside, for which it is equipped.
+
+If an ETCS equipped train passes a level transition to one or more levels for which it is not equipped, ETCS shall initiate a brake application.
+
+The current operational status shall be indicated to the driver on the DMI 
+
+The ETCS on-board shall be capable of receiving National values from the trackside to adapt to National requirements 
+
+National values shall be applicable to a defined area.
+
+Once received onboard the national values shall remain valid even if the onboard equipment is switched off.  
+
+If the on-board has no valid national values for the current location, default values shall be used by the onboard equipment.
+
+Default values shall be harmonised values, permanently stored in all ERTMS/ETCS on board equipment.

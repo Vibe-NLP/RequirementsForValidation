@@ -1,0 +1,324 @@
+MUST1	
+1. The user registers (2.2) to become a member.
+2. The portal greets the new member with a few member statistics (MAY2) and a list of things to	
+do (SHOULD3), in particular taking the temperament test.	
+3. The member takes the Temperament Test (2.3).
+4. The portal directs him to an explanation of the resulting type as posted on keirsey.com or mbti.com (MUST4) and describes the list of possibilities for further action (MAY5).	
+5. The member works with Search For Members (2.4).	
+6. The member works with Status Page (2.6).
+7. The member logs out (MUST6).	
+
+2.1.2 Exceptions and variants
+
+• 1b. The member logs in (MUST7).	
+2b.  The portal greets the existing member with the Member List (2.5) of members that have answered an RCD positively since the last view of the Status Page (MAY8).	
+
+2.1.3 Notes
+
+• Request for Contact Details (RCD): From the point of view of member A, another member B can be in four different states: no_contact (the initial state) means no RCD has been sent between the
+two, RCD_sent means A has made an RCD to B, RCD_received means B has made an RCD to A, and in_contact means each has made an RCD to the other and both can see the other’s contact details (full name and email address) which are normally hidden. Sending an RCD happens in the no_contact and RCD_received state only, the latter case is called ”answering an RCD”. A positive answer leads to the in_contact state, a negative answer to the no_contact state.
+
+Precondition: User is not logged in
+
+1. The user enters the following mandatory information (see the notes):
+— full name, email address (MUST10)
+— town, country (MUST11)
+— life motto (MUST12)
+— username, password (MUST13)
+2. The user enters the following optional information (see the notes):
+— secondary life motto (MUST14),
+— list of likes (SHOULD15),
+— list of dislikes (SHOULD16),
+— GPS coordinates of place of residence (SHOULD17),
+— primary Enneagram personality type (SHOULD18),
+— secondary Enneagram personality type (SHOULD19).
+3. The user submits this data for registration.
+4. The portal validates the username, registers the user as a new member, stores the data, and logs in the member (MUST20).
+
+
+Exceptions and variants
+
+• 2b. The user can also add this information later using the Status Page.
+• 4b. The portal rejects the username because it is not unique (already in use) and sends the user back to step 1 (MUST21).
+• 4c. The portal MAY22 validate the email address to have a valid domain.
+
+2.2.3 
+Notes
+
+• Steps 1 and 2 should be considered a whole and can be distributed over one or several dialog pages according to the chosen UI philosophy.
+• Full name and email address are initially hidden from view for other members. Members can make them visible on a one-to-one basis by the RCD mechanism described in 2.5. All other data is considered public.
+• The life motto is an arbitrary one-line phrase or sentence meant to characterize the person.
+• The likes and dislikes are sets of words or short phrases that characterize things, activities, at- tributes, etc. that a person is fond of or cannot stand, respectively.
+• The portal MAY23 also offer to select from the union set of likes (or dislikes, respectively) sub- mitted by all other members in order to create a more controlled vocabulary.
+• GPS coordinate format: GPS coordinates are entered textually in decimal notation. They MUST24 conform to the following regular expression: \d+[\.\d+]? ?[NnSs] ?,? ?\d+\[.\d+]? ?[EeWw]
+
+
+• GPS coordinate precision: The user can freely choose the precision of the GPS coordinates (number of decimal places) and hence the precision with which the location is revealed.
+• GPS coordinate determination:  The portal MAY25  provide an explanation how to determine one’s own GPS coordinates via Google Maps and its ”URL for this page” link.
+• Enneagram type: This is a personality type. See http://www.9types.com for details. A type is a 1-of-n selection among ”unknown”, ”1 (reformer)”, ”2 (helper)”, ”3 (motivator)”, ”4 (artist)”, ”5 (thinker)”, ”6 (loyalist)”, ”7 (enthusiast)”, ”8 (boss)”, ”9 (mediator)” and for the secondary type
+also ”none” (MUST26). The portal MAY27 offer hyperlinks with explanations of each type and	
+
+SHOULD28 guide the member to an Enneagram test on 9types.com for determining primary and secondary type.
+
+
+2.3 Member takes the Temperament Test
+
+2.3.1 Main scenario
+
+
+
+
+
+MUST29	
+Precondition: User (member) is registered and logged in.
+
+1. The portal presents the binary questions of the TTT (see notes).
+2. The member answers the questions by selecting one of the two choices for each of the questions (MUST30).	
+3. The portal evaluates the answers, computes and stores the test result and displays the test result (MUST31) along with the MBTI type (MUST32), Keirsey temperament (MAY33) and hyperlinks	
+
+to explanations of each (SHOULD34).
+
+2.3.2 Exceptions and variants
+
+• 2b. The member may choose not to answer all of the questions. Individual questions can be left
+without an answer at will (SHOULD35).	
+• 3b. The portal rejects the answers because less than five answers have been received for at least
+one of the four dimensions (SHOULD36, see notes).	
+
+2.3.3 TTT, KTS, MBTI, E/I, S/N, T/F, J/P, type, temperament
+
+• The TTT (Trivial Temperament Test) is a simple personality test along the lines of the Keirsey	Temperament Sorter (KTS) as provided on keirsey.com. Its results have the same structure as
+those of the KTS. The TTT, however, was invented for the Plat_Forms contest only; it is coarse, unvalidated, and somewhat nerd-oriented and should hence not be taken too seriously.
+• You find the definition (questions, answer choices, and corresponding dimension indicators) of the TTT in the file ttt-questions.txt. The format is as follows: There is one 4-line block for each of the 40 questions of the TTT. Line 1 is the question, lines 2 and 3 are the answer choices (must be presented in this order) preceeded by the evaluation marker (indicating dimension and tendency) and a colon, line 4 is empty.
+
+• The KTS classifies a person’s personality along the four dimensions of the MBTI (Myers-Briggs Type Indicator), the world’s most widely used personality assessment instrument. These dimen-
+sions are: E (extrovert) vs. I (introvert), S (sensing) vs. N (intuitive), T (thinking) vs. F (feeling), and J (judging) vs. P (perceiving); see Wikipedia and mbti.org for details. (Note that the dis- cussion about what is similar or different between KTS and MBTI with respect to the types and dimensions is complicated and sometimes heated. We will consider them equivalent here. Also do not get distracted by the varying labels assigned to the two ends of each dimension; they do not matter for our purposes.)
+• An MBTI personality type is a combination of four letters, one per dimension, e.g.  INTP or ESTJ etc. (The dimensions are always given in this order.) There are hence 16 different types.
+• A Keirsey temperament is a cluster of 4 MBTI types. There are hence 4 different Keirsey tem- peraments. They are: SJ (”Guardian”), SP (”Artisan”), NT (”Rational”), NF (”Idealist”). For instance, the ISTJ, ESTJ, ISFJ, and ESFJ types are all SJ (”Guardian”) temperaments.
+• TTT type is the same as MBTI type.
+• The TTT works as follows:
+— Each question targets a certain tendency along one of the dimensions. For example, a particu- lar question may refer to the E/I dimension. Then one of its answer choices indicates a tendency in the E direction, the other a tendency in the I direction.
+— Test evaluation just counts these tendencies across all questions and computes their difference within each dimension. For example if there are 10 questions for the E/I dimension, and the user chose the E answer 7 times and the I answer 3 times, the resulting type would contain E, and the full test result would indicate E+4.
+— Test results indicate how many more answers the stronger tendency in each direction had than the weaker one. For example E+4S+5T+1J+0 means we had four more E than I answers, 5 more S than N answers, 1 more T than F answers, and as many J as P answers. The resulting type in this case would be ESTJ, the temperament would be SJ.
+— In the case of ties (as with J vs. P above), the portal MUST37 always prefer I over E, S over N, T over F, and J over P. So we can have E+0, S+0, T+0, or J+0, but never I+0, N+0, F+0, or P+0.
+
+
+2.4 Member works with Search For Members
+
+2.4.1 Main scenario
+
+MUST38
+Precondition: User (member) is registered and logged in.
+1. The portal presents a search dialog with the following filtering choices (see notes for details):
+2. Status-related choices:
+— only members who are not yet contacts of mine (MUST39)
+— only members who have not yet received an RCD from me (SHOULD40)
+— only members who have registered since my last logout (MAY41)
+— only members who have registered during the last 1/3/7/14/30/60/90 days (MAY42)
+— only members who have taken a TTT since my last logout (MAY43)
+— only members who have taken a TTT during the last 1/3/7/14/30/60/90 days (MAY44)
+
+
+3. Location-related choices:
+— only members in my country (MAY45)	
+— only members who live less than 5/10/20/50/100/200/500/1000/2000/5000 kilometers away (SHOULD46)	
+4. Personality-type-related choices:
+— only members with the following TTT types <types> (MUST47)	
+— only members with the same primary Enneagram type (MAY48)	
+— only members with one of my Enneagram types as one of theirs (MAY49)	
+— only members with one of their Enneagram types related to one of mine (MAY50)	
+5. Like/dislike-related choices:
+— only members whose life motto (any one) contains <string> (MUST51)	
+— only members who share one of my likes (SHOULD52, and MAY53 be extended into ”share at least 1/2/3 of my likes”)
+
+
+
+— only members who share one of my dislikes (SHOULD54, and MAY55 be extended into ”share at least 1/2/3 of my dislikes”)
+
+— only members who dislike none of my likes (SHOULD56, and MAY57  be extended into	
+
+”dislike at most 0/1/2 of my likes”)
+
+
+
+— only members who like none of my dislikes (SHOULD58, and MAY59 be extended into ”like	
+
+at most 0/1/2 of my dislikes”)
+6. The member selects some choices (at least one) and submits the search
+7. The portal finds all members that satisfy all of the filters and presents them as a Member List
+(2.5) that the member can then work with.
+
+
+2.4.2 Notes
+
+
+
+
+• x kilometers away: The comparison is performed based on the GPS coordinates alone. You need GPS not implement spherical geometry computations, rather you MUST60 use the following simple  substitute: with a longitude difference of x and a latitude difference of y, the distance d is d =
+px2 + y2, where the unit of d i0 kilometers. If you make sure you choose the shortest way,
+this is correct with respect to latitude differences and tends to overestimate longitude differences (except near the equator, where it underestimates, since 40, 000/360 ? 111).
+• GPS data precision: The low precision that some users may have chosen for their GPS coordi- nates is ignored in the distance computation. All data is treated as if it was arbitrarily precise.
+• You SHOULD61  devise a nice interaction style for specifying a set of types.  It needs not be	 capable of representing arbitrary sets; wildcards (”don’t care”) for individual dimensions are sufficient.  It is useful if the member can quickly recall selections used in previous searches (MAY62).	
+• Related Enneagram type: Enneagram theory talks about relationships from each type to two other types, marked by arrows to and from in Figure 2.1. For example for somebody with type 1, the related types are 4 and 7. For somebody with types 1 and 2 they would be 4, 7, and 8.
+• Choices that make no sense because of missing data (e.g. lack of TTT result, Enneagram type,
+or dislikes list for the current user) SHOULD63 be disabled.	
+
+
+
+MUST64
+Precondition: User (member) is registered and logged in.
+
+1. The portal displays a graphic with a 2-dimensional overview plot of the distribution of the mem- bers in the list (MUST65, see notes).
+2. The member changes which variables are plotted in the graphic (MUST66).
+3. The portal displays an updated graphic.
+4. The portal shows the members of the list with the following attributes: username, town, country, life mottos, TTT type, and Enneagram types (MUST67).
+5. The member selects some members whom s/he has not yet sent a Request For Contact Details (RCD, MUST68, see 2.1.3).
+6. The portal sends an RCD to these members (MUST69).
+7. The member requests to see the Status Page of one member from the list (MUST70).
+8. The portal shows the Status Page (2.6).
+
+2.5.2 Exceptions and variants
+
+• 1b, 4b: If the member list is empty, the graphic is suppressed and the list replaced by a message (MAY71).
+
+Plot: Each member in the list (plus the user) is shown by one symbol positioned along two axes. See Figure 2.2 for an example. The horizontal and vertical axis each represent one of the following values for the member:
+• E-I (positive values x for test results containing E+x, negative ones for I+x, MUST72),
+• S-N accordingly (MUST73),
+
+
+
+Plot interaction: Clicking on the symbol of a member in the graphic MAY87 call that member’s Status	
+Page (2.6)
+
+2.5.4 Other notes
+
+• Sorting: The list MAY88 allow sorting by each attribute.	
+• Long lists (over 50 members) SHOULD89 be paginated.	
+
+2.6 Member works with Status Page
+
+2.6.1 Main scenario
+
+MUST90
+Precondition: The user is logged in as member A
+1. The Portal presents a status page about the member A that contains the following information:
+— I: the set of information that is usually submitted on registration (MUST91, see 2.2)
+— M: a link to an external Google Maps page that will show a map (about 100 km across) of the area around the member’s given GPS coordinates (MAY92)
+— T: the result and timestamp of the last TTT-taking (MUST93)
+— C: the Member List (2.5) of members with in_contact status (MUST94)
+— S: the Member List (2.5) of members with RCD_sent status (SHOULD95)
+— R: the Member List (2.5) of members with RCD_received status (MUST96)
+2. The member reviews and modifies some or all of the information I (SHOULD97).
+3. The member selects some members from the RCD_received list and answers positively (MUST98).
+4. The portal updates the RCD_sent and in_contact lists (MUST99).
+5. The member selects some members from the RCD_received list and answers negatively (MUST100).
+6. The portal updates the RCD_sent list (MUST101).
+7. The member calls the Status Page of a member X from any of the lists (MUST102).
+8. The portal presents the Status Page (2.6) of X.
+
+2.6.2 Exceptions and variants
+
+• If the Status Page shown is not about member A, but rather about a different member B, the member lists S and R are not shown and steps 2, 3, 4, 5, 6 are not possible (MUST103).
+• Unless B has in_contact status, the contact details (full name, email address) are also not shown (MUST104).
+• 2b: The member takes another TTT. The portal stores the new result and uses it in place of the previous one (SHOULD105).
+• 2bb: The portal MAY106 store not just one, but rather several (or even all) previous results of TTT-takings. The member can list all previous results (with timestamps, in chronological order) and select one of them to be used as his or her ”official” result which the other members get to see.
+
+2.6.3 Notes
+
+• Long member lists SHOULD107 be paginated.
+• The Status Page MAY108 actually be realized as multiple separate pages.
+• Google Maps: Information about how to construct a suitable Google Maps URL can be found on the web (but not at Google). The most relevant parameters are z and ll.
+
+
+3 Functional requirements: Web Service interface
+
+
+3.1 General information
+
+• The web service interface consists of a single port type PbtServices and a single SOAP RPC binding for it.
+• Its WSDL specification is available in the file PbT.wsdl.
+• Your implementation of the service MUST109 be bound to URL /soap on your server.	
+• The WSDL of your final implementation MUST110 be bound to URL /wsdl on your server.	
+• With a single exception (clearDatabase, Section 3.3), the operations in the service follow the use cases described in Section 2 quite closely and represent most (but not all) of their underlying business functionality.
+• The service performs no elaborate exception handling. Rather, illegal calls or calls to operations
+you have not implemented MUST111 simply return a nil result.	1
+• All of the WSDL specification MUST112 be implemented, but only those parts of the underlying	2 functionality actually need to be present that you have also implemented on the usecase level
+(that is, in the HTML user interface). Therefore, input parameters that represent functionality
+you have not implemented on the usecase level MUST113 simply be ignored and output attributes	3 that represent functionality you have not implemented on the usecase level MUST114 simply be	4 returned as nil.  The one exception of this rule is the clearDatabase operation, which must be implenented in any case.
+• Beyond the elementary types and arrays thereof, there is only one single complex type (plus ar- rays thereof) that is used in the operations: Memberinfo represents the details about one member roughly as represented on the status page. See the WSDL for details.
+The subsequent descriptions of the individual operations can only be fully understood in conjunction with PbT.wsdl (because only parts of the signatures are discussed here) and the usecases in Section 2 (because those describe most of the semantics).
+
+
+3.2 complexType Memberinfo
+
+The attributes of Memberinfo represent the data about a member that is (or may be) shown to other members in a member list or on a status page.
+• The rcdStatus is one of the strings ”no_contact”, ”RCD_sent”, ”RCD_received”, or ”in_contact”
+and MUST115 be expressed from the point of view of the member that has requested the Mem-	5 berinfo. A member has ”in_contact” status relative to him/herself.
+
+
+• The contact details fullname and emailAddress will be nil unless rcdStatus is ”in_contact”
+• gpsCoordinates follows the format convention described in Section 2.2.3
+• All other attributes should be self-explanatory.
+
+clearDatabase resets PbTs complete internal state to what it was just after the initial deployment: no users are registered, no current sessions or TTT results or RCDs exist (MUST116).
+This operation is needed to support the evaluation of the system, in particular load testing.
+
+
+3.4 operations submitMemberinfo, getMemberinfo
+
+submitMemberinfo is used for registration (MUST117, in this case sessionId must be nil and username must not be previously used) and is also when a member modifies his/her information via the status page (MUST118, in this case sessionId must be a valid id as obtained by operation login and username must be nil).
+All other parameters should be self-explanatory after reviewing the corresponding usecases in Sec- tions 2.2 and 2.6.
+getMemberinfo (MUST119) obtains a Memberinfo object that contains the information stored by submitMemberinfo as described in Section .
+
+3.5 operations login, logout
+
+login (MUST120) authenticates a member via username and password. If the authentication fails, the call returns nil. Otherwise, it returns a sessionId string that is used for identifica- tion/authentication of the current user in subsequent calls of other operations.
+logout (MUST121) invalidates a sessionId previously created by login.
+
+3.6 operation takeTtt
+
+takeTtt (MUST122) realizes the core of usecase 2.3. It evaluates one set of answers to the TTT, computes the TTT result and TTT type, and stores them (plus a timestamp) for the current user.
+answers is a string that contains one character for each question in the TTT (although not necessarily in that order). The character represents the answer given for that question. Assume character x represents the answer to a T/F question, then x is either T or F or blank; likewise for the other kinds of questions. Blank means the question has not been answered and will not be counted.
+
+
+3.7 operations  searchForMembers,  searchForMembersGraphic
+
+searchForMembers (MUST123) realizes the core of the usecase 2.4. It takes many parameters describing the search filters and returns an array of Memberinfo objects that represent the members thus found as described in Section 3.2.
+Unused filters are indicated by nil for string, false for boolean, 0 for int where 0 is a null-filter, 999999 for int where infinity is a null-filter. tttTypes is an array of TTT type strings (such as ”ESTP” etc.) that indicates the set of types of interest.
+searchForMembersGraphic (MUST124) performs the same search, but instead of returning    4
+Memberinfo objects, it returns the byte sequence of a GIF or PNG image file as described in Section
+2.5.3. The image is xSize pixels wide, ySize pixels high and indicates the values of xVariable along the horizontal axis and yVariable along the vertical axis; the variables are given by their names as described in Section 2.5.3.
+
+
+3.8 operations getMemberlist, getMemberlistGraphic
+
+getMemberlist (MUST125) realizes the core of the usecase 2.5. It retrieves the Memberinfo of	5 all members that have the given rcdStatus from the point of view of member username.
+getMemberlistGraphic (MUST126) is to getMemberlist what	6
+searchForMembersGraphic is to searchForMembers.
+For both operations, if the current user is not allowed to get the list (because username is not the current user and rcdStatus is not ”in_contact” or because rcdStatus is ”no_contact”), nil is returned.
+
+
+3.9 operation sendRcd
+
+sendRcd (MUST127) realizes an aspect of usecases 2.5 and 2.6: it sends an RCD from the current	7 user to the members indicated in the username array or answers an RCD received from these mem-
+bers. Sending and positive answering is exactly the same: positive is true. Negative answering happens when positive is false. Negative answering to a member that had not send an RCD has no consequence whatsoever. Sending an RCD to a member with in_contact status has no consequence whatsoever.
+
+4.1 User interface
+
+The user interface MUST128 conform to the above-mentioned requirements (as far as they are realized at all) in a sensible way with respect to the arrangement and markup of its elements and the labels, prompts and explanations that guide the user. Within those limits, the organization and design of the interface is left to the professional judgement of the participants.
+The userinterface SHOULD129  provide sufficient explanation of all uncommon concepts to guide a user who does not have prior knowledge about these topics. Make use of external links where needed. Do not include copyrighted material without permission.
+Elaborate graphical design (MAY130) is not important, but CSS SHOULD131 be used throughout to simplify future improvements.
+It would be nice if the user interface works even when Javascript is turned off in a user’s browser (MAY132).
+
+4.2 Browser compatibility
+
+The portal MUST133 work fully with Firefox 1.5 and higher.
+• The portal MUST134 work fully with Internet Explorer 6 and higher.
+• The portal SHOULD135 work fully with Safari 2 and higher.
+• The portal SHOULD136 work fully with Opera 8 and higher.
+• The portal MAY137 work fully with other browsers such as Konqueror, Opera Mini, Lynx etc.
+• If the portal relies on Javascript in the browser and Javascript is unavailable, it SHOULD138 either produce a clear message saying that the portal is not functional (and why) or fall back to reduced (but still useful) functionality.
+
+
+
+

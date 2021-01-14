@@ -1,0 +1,96 @@
+1. OE-1:System Administration must support a library system with 50 locations, 20 million circulations, purchasing and processing over 500,000 items per year. It is highly desirable that searches and reports can be processed during open hours without disrupting other system functions.
+2. OE-2: System Administration shall operate on a Linux or Solaris server.
+3. OE-3: System Administration shall be accessible through a web-browser or a Windowscompatible client.
+4. OE-4: If web-browser based, System Administration shall be accessible through Microsoft Internet Explorer (v.6.0 and later) and Mozilla Firefox (v.2.0 and later).
+5. OE-5: System Administration shall be accessible with screen-reading software, screenmagnification software, and other software programs designed to increase accessibility.
+6. CO-1: System Administration Module shall use a fully relational database back-end.
+7. CO-2: System Administration Module shall produce standards-compliant HTML.
+8. CO-3: System Administration Module shall provide a development and training environment with the ability to migrate configurations to a production environment.
+9. CO-4: User rights and privileges will be controlled through security groups and/or “roles” that allow access control for individuals, workgroups, and arbitrary staff groups.
+10. UD-1: The software developer shall provide complete data specifications for authority records, bibliographic records, order records, item records, hold/request records, and other records maintained or accessed by the System Administration Module.
+11. UD-2: The software developer shall provide a thorough high-level description of major processes, including bibliographic record import and export, validation of bibliographic records against internal and external authority sources, and standard reports.
+12. UD-3: The system shall provide an online, hierarchical, and cross-linked help system in HTML that describes and illustrates all system functions.
+13. AS-1: The System Administration Module is part of an enterprise-level Library Automation System.
+14. AS-2: System Administration process are consolidated at a central location, and accept input and provide services to multiple locations.
+15. DE-1: The System Administration Module relies on the data structures and functionality of an enterprise-level Library Automation System, including Acquisitions and Cataloging modules.
+16. DE-2: The System Administration Module interface with a variety of vendor websites, via published APIs and/or automated transfer of standard-format data files (e.g. USMARC21, EDIFACT).
+17. DE-3: The System Administration Module interacts with a patron interface, also known as an Online Public Access Catalog (OPAC).
+18. Req ID: 6512 System runs on a fully relational, SQL-based database system.
+19. Req ID: 5615 The system provides real-time processing.
+20. Req ID: 5323 Depending on assigned privileges, staff can view all patron and item fields; patrons can access only selected fields. Record changes are applied in a reasonable way, with prompts to warn when a record has been changed since it was displayed.
+21. Req ID: 6513 For any patron record or item record, staff can identify where it is in use (location, user, date and time placed).
+22. Req ID: 2492 Individual logins allow user-level preferences and audit trail.
+23. For any patron record or item record, staff can identify where it is in use (location, user, date and time placed).
+24. Req ID: 2428 System documentation is library-specific and follows standard formats for technical documentation. Documentation is specific to the particular version of the software in use at library. Documentation is web-based, indexed, organized by function, and easily searchable.
+25. Req ID: 2431 System upgrades and updates include written guidelines for updating servers and clients. Includes list of new, changed, and removed features.
+26. Req ID: 2479 System provides access to all configuration files.
+27. Req ID: 2474-1  System provides full access to all log files. 
+28. Req ID: 2474-2  Log files can be reviewed without stopping system. 
+29. Req ID: 2474-3   Logs can be enabled, disabled, and set to a specific retention threshold.
+30. Req ID: 2470 System provides access to root shell.
+31. Req ID: 6520-1 System supports creation of custom dashboards that display current and historical data about system performance, record creation and modification, circulation transactions, etc. 
+32. Req ID: 6520-2 Administrators can create dashboards and give access to selected users and groups.
+33. Req ID: 6501-1 System provides full support for SNMP and supports monitoring of system resources, including disk space, CPU load, memory load, system processes, system interfaces and ports. 
+34. Req ID: 6501-2 Alert thresholds are configurable. 
+35. Req ID: 6501-3 Alerts can be sent via administrative dashboards, email messages, and text messages. 
+36. Req ID: 6501-4  Alerts can be sent to unlimited number of recipients via any or all alert methods.
+37. Req ID: 7302 Ability to set thresholds on the length of time records are locked and provide, for all record types, a list of records in sustained use/locked condition.
+38. Req ID: 2467-1  System provides dashboard of performance monitoring and management tools. Identification of processes with process ID, owner username, IP address (if applicable), CPU utilization, memory utilization, run time. Runaway processes are identified. 
+39. Req ID: 2467-1  System status is represented by visual indicators (e.g. green and red lights).
+40. Req ID: 2466 System provides a server management console including: software shutdown utility, software startup utility, server shutdown utility, server restart utility.
+41. Req ID: 2464 System provides an administrative dashboard displaying: last full and incremental backup; last planned and unplanned system reboot; last software upgrade; current software version; transactions waiting to be processed; size of log-files; current count of records by record type (item, bibliographic, patron etc), database utilization (size, processes running).
+42. Req ID: 2430 System provides a management console displaying workstations running client software; workstation name and IP address; and utilities for managing and killing client sessions.
+43. Req ID: 6503-1  System provides a circulation dashboard showing key performace indicators such as check-outs per hour, check-ins per hour, holds placed per hour, holds paged per day, etc. 
+44. Req ID: 6503-2  Indicators can be limited to a single branch or set to systemwide.
+45. Req ID: 6517-1 System provides a single console with access to all configuration files. 
+46. Req ID: 6517-2  Read and write permission to individual configuration files can be assigned to users and groups.
+47. Req ID: 2433 System provides a dashboard for locating and viewing log files.
+48. Req ID: 6521 System provides a single interface for reviewing and controlling scheduled tasks, including staff-scheduled tasks, automated reports, scheduled imports and exports, software updates, etc.
+49. Req ID: 6516 System supports SMTP for email transport.
+50. Req ID: 2445 System supports restrictions based on business rules, e.g. restrictions on deleting item records that are in checked-out status, or restrictions on deleting bibliographic records with existing holds.
+51. Req ID: 5278-1 System provides customizable 'Rules of Suppression' that specify whether patrons and staff can view authority, bibliographic, order, and item records in staff and public (OPAC) interfaces. 
+52. Req ID: 5278-2  Records may be visible to specific workgroups only; to all staff and patrons at specific locations; or to all staff and all patrons.
+53. Req ID: 5190-1 System allows creation and modification of requesting rules that determine whether a patron can place a hold on an item. 
+54. Req ID: 5190-2 Requesting rules may evaluate patron type, current number of holds, current patron account balance, item type, item status, owning location code, and other criteria.
+55. Req ID: 5190-3  Requesting rules also specify whether staff with specific privileges or roles can override specific criteria.
+56. Req ID: 5057-1 System allows creation and modification of loan rules that allow or disallow check-out of items, calculate loan periods, and determine renewal limits. 
+57. Req ID: 5057-2  Loan rules may evaluate patron type, current number of items checked out, current patron account balance, item type, item status, owning location code, check-out location code, and other criteria.
+58. Req ID: 5057-3   Loan rules can access check-out location open/closed schedule in calculating due date.
+59. Req ID: 5057-4   Loan rules also specify whether a specific criteria may be overridden by staff with specific privileges or roles.
+60. Req ID: 6502-1 System provides capability to perform live incremental and full backups
+61. of data and transaction logs. 
+62. Req ID: 6502-2  System supports use of third-party backup software such as EMC NetWorker.
+63. Req ID: 6505  System logs data changes (such as record deletions) and provides "undo" functionality. Ideally, system provides revision control.
+64. Req ID: 6510 Patron data is secure in all transfers to and from the system.
+65. Req ID: 6509 System administrative staff has full visibility and control of user privileges.
+66. Req ID: 6511- 1 System supports secure protocols, including SFTP, SSL, and SSH.
+67. Req ID: 6511-2 SFTP is supported in both active and passive modes, configurable per vendor.
+68. Req ID: 1716-1  MARC bibliographic and authority records can be imported and exported, singly and in batch, all fields or selected fields, to and from vendors including OCLC.
+69. Req ID: 1716-2 Imported records can overlay existing short or full bibliographic records. 
+70. Req ID: 1716-3 Imported batches can be maintained and manipulated as selection lists .
+71. Req ID: 6518-1 System supports an unlimited number of record sets, with the ability to import and export set members in batch. 
+72. Req ID: 6518-2  Record sets can be the basis for batch field updates; can be used as a limiting scope for queries; can be used to delete original records with the ability to review prior to deletion, write errors to a log file, and undo one or more deletions.
+73. Req ID: 2420-1  System provides a dedicated interface for creating new staff accounts.  
+74. Req ID: 2420-2   New staff account creation process provides configurable templates for account administrator use; provides granular privileges for account creation, modification, and deletion.
+75. Req ID: 2419-1  System provides a dedicated interface for creating new patron accounts. 
+76. Req ID: 2419-2   Patron account creation process provides configurable templates for staff use; supports field validation and required fields; provides configurable defaults.
+77. Req ID: 6507-1  System supports scheduling of maintenance tasks, reports, and data exports. 
+78. Req ID: 6507-2   Jobs can be scheduled in sequence ("start job B when job A finishes") and can be modified or cancelled at any time prior to starting.
+79. Req ID: 6508-1 Staff can be given permission to schedule tasks, reports, and data exports. 
+80. Req ID: 6508-2  System administration staff can view and manage jobs scheduled by other staff.
+81. Req ID: 2220-1  System supports administrator-programmable and user-programmable macros and/or keyboard shortcuts. 
+82. Req ID: 2220-2   Shortcut keys may be assigned to macros (e.g. 'Insert Field') or to text strings. Macros are centrally managed on server, can be imported from and exported to individual users, and can be restricted for use and/or editting through centrallymanaged permissions.
+83. Req ID: 6514 Staff and group accounts are independent from workstations; client install should not be tied to a specific location.
+84. Req ID: 6504-1 Client software installation and updates must be centrally managed, using standard or proprietary network management tools, allowing streaming updates from server.
+85. Req ID: 6504-2 Client software can be managed with VNC and Remote Desktop.
+86. Req ID: 6519 All client configuration files are server based; configurations can be exported and imported between clients.
+87. Req ID: 5624-1 System provides a user-friendly interface for designing queries against all record types. 
+88. Req ID: 5624-2  Staff can select fields to query; select values from picklist of possible values; select regular expressions from drop-down menu, and use a full range of Boolean operators. 
+89. Req ID: 5624-3   Administrators control staff access to tables and fields.
+90. Req ID: 5607 System administrators can create report templates that are available to front-line staff, and can be run as is or modified to the staff person's particular needs.
+91. Req ID: 5617 System provides fine-grained permissions to allow or disallow staff to run specific reports, and/or to run ad hoc reports on specific sets of data.
+92. Req ID: 2465-1 System reports for each record type: current record number, current number of records, number deleted, and number purged. 
+93. Req ID: 2465-2 Record types include patron, bibliographic, item, order, invoice, etc. 
+94. Req ID: 2465-3 Access to record numbers is controlled at the user/group level.
+
+
