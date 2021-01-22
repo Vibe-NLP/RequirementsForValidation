@@ -1,17 +1,16 @@
 MUST1	
-1. The user registers (2.2) to become a member.
-2. The portal greets the new member with a few member statistics (MAY2) and a list of things to	
-do (SHOULD3), in particular taking the temperament test.	
-3. The member takes the Temperament Test (2.3).
-4. The portal directs him to an explanation of the resulting type as posted on keirsey.com or mbti.com (MUST4) and describes the list of possibilities for further action (MAY5).	
-5. The member works with Search For Members (2.4).	
-6. The member works with Status Page (2.6).
-7. The member logs out (MUST6).	
+The user registers (2.2) to become a member.
+The portal greets the new member with a few member statistics (MAY 2) and a list of things to do (SHOULD 3), in particular taking the temperament test.	
+The member takes the Temperament Test (2.3).
+The portal directs him to an explanation of the resulting type as posted on keirsey.com or mbti.com (MUST4) and describes the list of possibilities for further action (MAY 5).	
+The member works with Search For Members (2.4).	
+The member works with Status Page (2.6).
+The member logs out (MUST6).	
 
 2.1.2 Exceptions and variants
 
-• 1b. The member logs in (MUST7).	
-2b.  The portal greets the existing member with the Member List (2.5) of members that have answered an RCD positively since the last view of the Status Page (MAY8).	
+1b. The member logs in (MUST7).	
+2b.  The portal greets the existing member with the Member List (2.5) of members that have answered an RCD positively since the last view of the Status Page (MAY 8).	
 
 2.1.3 Notes
 
@@ -27,11 +26,11 @@ Precondition: User is not logged in
 — username, password (MUST13)
 2. The user enters the following optional information (see the notes):
 — secondary life motto (MUST14),
-— list of likes (SHOULD15),
-— list of dislikes (SHOULD16),
-— GPS coordinates of place of residence (SHOULD17),
-— primary Enneagram personality type (SHOULD18),
-— secondary Enneagram personality type (SHOULD19).
+— list of likes (SHOULD 15),
+— list of dislikes (SHOULD 16),
+— GPS coordinates of place of residence (SHOULD 17),
+— primary Enneagram personality type (SHOULD 18),
+— secondary Enneagram personality type (SHOULD 19).
 3. The user submits this data for registration.
 4. The portal validates the username, registers the user as a new member, stores the data, and logs in the member (MUST20).
 
@@ -40,50 +39,40 @@ Exceptions and variants
 
 • 2b. The user can also add this information later using the Status Page.
 • 4b. The portal rejects the username because it is not unique (already in use) and sends the user back to step 1 (MUST21).
-• 4c. The portal MAY22 validate the email address to have a valid domain.
+• 4c. The portal MAY validate the email address to have a valid domain.
 
-2.2.3 
-Notes
+2.2.3 Notes
 
 • Steps 1 and 2 should be considered a whole and can be distributed over one or several dialog pages according to the chosen UI philosophy.
 • Full name and email address are initially hidden from view for other members. Members can make them visible on a one-to-one basis by the RCD mechanism described in 2.5. All other data is considered public.
 • The life motto is an arbitrary one-line phrase or sentence meant to characterize the person.
 • The likes and dislikes are sets of words or short phrases that characterize things, activities, at- tributes, etc. that a person is fond of or cannot stand, respectively.
-• The portal MAY23 also offer to select from the union set of likes (or dislikes, respectively) sub- mitted by all other members in order to create a more controlled vocabulary.
-• GPS coordinate format: GPS coordinates are entered textually in decimal notation. They MUST24 conform to the following regular expression: \d+[\.\d+]? ?[NnSs] ?,? ?\d+\[.\d+]? ?[EeWw]
-
+• The portal MAY also offer to select from the union set of likes (or dislikes, respectively) sub- mitted by all other members in order to create a more controlled vocabulary.
+• GPS coordinate format: GPS coordinates are entered textually in decimal notation. They MUST conform to the following regular expression: \d+[\.\d+]? ?[NnSs] ?,? ?\d+\[.\d+]? ?[EeWw]
 
 • GPS coordinate precision: The user can freely choose the precision of the GPS coordinates (number of decimal places) and hence the precision with which the location is revealed.
-• GPS coordinate determination:  The portal MAY25  provide an explanation how to determine one’s own GPS coordinates via Google Maps and its ”URL for this page” link.
+• GPS coordinate determination:  The portal MAY  provide an explanation how to determine one’s own GPS coordinates via Google Maps and its ”URL for this page” link.
 • Enneagram type: This is a personality type. See http://www.9types.com for details. A type is a 1-of-n selection among ”unknown”, ”1 (reformer)”, ”2 (helper)”, ”3 (motivator)”, ”4 (artist)”, ”5 (thinker)”, ”6 (loyalist)”, ”7 (enthusiast)”, ”8 (boss)”, ”9 (mediator)” and for the secondary type
-also ”none” (MUST26). The portal MAY27 offer hyperlinks with explanations of each type and	
-
-SHOULD28 guide the member to an Enneagram test on 9types.com for determining primary and secondary type.
+also ”none” (MUST26). The portal MAY offer hyperlinks with explanations of each type and SHOULD guide the member to an Enneagram test on 9 types.com for determining primary and secondary type.
 
 
 2.3 Member takes the Temperament Test
 
 2.3.1 Main scenario
 
-
-
-
-
 MUST29	
 Precondition: User (member) is registered and logged in.
 
 1. The portal presents the binary questions of the TTT (see notes).
 2. The member answers the questions by selecting one of the two choices for each of the questions (MUST30).	
-3. The portal evaluates the answers, computes and stores the test result and displays the test result (MUST31) along with the MBTI type (MUST32), Keirsey temperament (MAY33) and hyperlinks	
-
-to explanations of each (SHOULD34).
+3. The portal evaluates the answers, computes and stores the test result and displays the test result (MUST31) along with the MBTI type (MUST32), Keirsey temperament (MAY 33) and hyperlinks	 to explanations of each (SHOULD 34).
 
 2.3.2 Exceptions and variants
 
 • 2b. The member may choose not to answer all of the questions. Individual questions can be left
-without an answer at will (SHOULD35).	
+without an answer at will (SHOULD 35).	
 • 3b. The portal rejects the answers because less than five answers have been received for at least
-one of the four dimensions (SHOULD36, see notes).	
+one of the four dimensions (SHOULD 36, see notes).	
 
 2.3.3 TTT, KTS, MBTI, E/I, S/N, T/F, J/P, type, temperament
 
@@ -112,53 +101,43 @@ Precondition: User (member) is registered and logged in.
 1. The portal presents a search dialog with the following filtering choices (see notes for details):
 2. Status-related choices:
 — only members who are not yet contacts of mine (MUST39)
-— only members who have not yet received an RCD from me (SHOULD40)
-— only members who have registered since my last logout (MAY41)
-— only members who have registered during the last 1/3/7/14/30/60/90 days (MAY42)
-— only members who have taken a TTT since my last logout (MAY43)
-— only members who have taken a TTT during the last 1/3/7/14/30/60/90 days (MAY44)
+— only members who have not yet received an RCD from me (SHOULD 40)
+— only members who have registered since my last logout (MAY 41)
+— only members who have registered during the last 1/3/7/14/30/60/90 days (MAY 42)
+— only members who have taken a TTT since my last logout (MAY 43)
+— only members who have taken a TTT during the last 1/3/7/14/30/60/90 days (MAY 44)
 
 
 3. Location-related choices:
-— only members in my country (MAY45)	
-— only members who live less than 5/10/20/50/100/200/500/1000/2000/5000 kilometers away (SHOULD46)	
+— only members in my country (MAY 45)	
+— only members who live less than 5/10/20/50/100/200/500/1000/2000/5000 kilometers away (SHOULD 46)	
 4. Personality-type-related choices:
 — only members with the following TTT types <types> (MUST47)	
-— only members with the same primary Enneagram type (MAY48)	
-— only members with one of my Enneagram types as one of theirs (MAY49)	
-— only members with one of their Enneagram types related to one of mine (MAY50)	
+— only members with the same primary Enneagram type (MAY 48)	
+— only members with one of my Enneagram types as one of theirs (MAY 49)	
+— only members with one of their Enneagram types related to one of mine (MAY 50)	
 5. Like/dislike-related choices:
 — only members whose life motto (any one) contains <string> (MUST51)	
-— only members who share one of my likes (SHOULD52, and MAY53 be extended into ”share at least 1/2/3 of my likes”)
+— only members who share one of my likes (SHOULD 52, and MAY53 be extended into ”share at least 1/2/3 of my likes”)
 
+— only members who share one of my dislikes (SHOULD 54, and MAY55 be extended into ”share at least 1/2/3 of my dislikes”)
 
+— only members who dislike none of my likes (SHOULD 56, and MAY57  be extended into ”dislike at most 0/1/2 of my likes”)
 
-— only members who share one of my dislikes (SHOULD54, and MAY55 be extended into ”share at least 1/2/3 of my dislikes”)
-
-— only members who dislike none of my likes (SHOULD56, and MAY57  be extended into	
-
-”dislike at most 0/1/2 of my likes”)
-
-
-
-— only members who like none of my dislikes (SHOULD58, and MAY59 be extended into ”like	
+— only members who like none of my dislikes (SHOULD 58, and MAY59 be extended into ”like	
 
 at most 0/1/2 of my dislikes”)
 6. The member selects some choices (at least one) and submits the search
 7. The portal finds all members that satisfy all of the filters and presents them as a Member List
 (2.5) that the member can then work with.
 
-
 2.4.2 Notes
-
-
-
 
 • x kilometers away: The comparison is performed based on the GPS coordinates alone. You need GPS not implement spherical geometry computations, rather you MUST60 use the following simple  substitute: with a longitude difference of x and a latitude difference of y, the distance d is d =
 px2 + y2, where the unit of d i0 kilometers. If you make sure you choose the shortest way,
 this is correct with respect to latitude differences and tends to overestimate longitude differences (except near the equator, where it underestimates, since 40, 000/360 ? 111).
 • GPS data precision: The low precision that some users may have chosen for their GPS coordi- nates is ignored in the distance computation. All data is treated as if it was arbitrarily precise.
-• You SHOULD61  devise a nice interaction style for specifying a set of types.  It needs not be	 capable of representing arbitrary sets; wildcards (”don’t care”) for individual dimensions are sufficient.  It is useful if the member can quickly recall selections used in previous searches (MAY62).	
+• You SHOULD61  devise a nice interaction style for specifying a set of types.  It needs not be	 capable of representing arbitrary sets; wildcards (”don’t care”) for individual dimensions are sufficient.  It is useful if the member can quickly recall selections used in previous searches (MAY 62).	
 • Related Enneagram type: Enneagram theory talks about relationships from each type to two other types, marked by arrows to and from in Figure 2.1. For example for somebody with type 1, the related types are 4 and 7. For somebody with types 1 and 2 they would be 4, 7, and 8.
 • Choices that make no sense because of missing data (e.g. lack of TTT result, Enneagram type,
 or dislikes list for the current user) SHOULD63 be disabled.	
@@ -179,7 +158,7 @@ Precondition: User (member) is registered and logged in.
 
 2.5.2 Exceptions and variants
 
-• 1b, 4b: If the member list is empty, the graphic is suppressed and the list replaced by a message (MAY71).
+• 1b, 4b: If the member list is empty, the graphic is suppressed and the list replaced by a message (MAY 71).
 
 Plot: Each member in the list (plus the user) is shown by one symbol positioned along two axes. See Figure 2.2 for an example. The horizontal and vertical axis each represent one of the following values for the member:
 • E-I (positive values x for test results containing E+x, negative ones for I+x, MUST72),
@@ -187,12 +166,11 @@ Plot: Each member in the list (plus the user) is shown by one symbol positioned 
 
 
 
-Plot interaction: Clicking on the symbol of a member in the graphic MAY87 call that member’s Status	
-Page (2.6)
+Plot interaction: Clicking on the symbol of a member in the graphic MAY call that member’s Status	Page (2.6)
 
 2.5.4 Other notes
 
-• Sorting: The list MAY88 allow sorting by each attribute.	
+• Sorting: The list MAY allow sorting by each attribute.	
 • Long lists (over 50 members) SHOULD89 be paginated.	
 
 2.6 Member works with Status Page
@@ -203,12 +181,12 @@ MUST90
 Precondition: The user is logged in as member A
 1. The Portal presents a status page about the member A that contains the following information:
 — I: the set of information that is usually submitted on registration (MUST91, see 2.2)
-— M: a link to an external Google Maps page that will show a map (about 100 km across) of the area around the member’s given GPS coordinates (MAY92)
+— M: a link to an external Google Maps page that will show a map (about 100 km across) of the area around the member’s given GPS coordinates (MAY 92)
 — T: the result and timestamp of the last TTT-taking (MUST93)
 — C: the Member List (2.5) of members with in_contact status (MUST94)
-— S: the Member List (2.5) of members with RCD_sent status (SHOULD95)
+— S: the Member List (2.5) of members with RCD_sent status (SHOULD 95)
 — R: the Member List (2.5) of members with RCD_received status (MUST96)
-2. The member reviews and modifies some or all of the information I (SHOULD97).
+2. The member reviews and modifies some or all of the information I (SHOULD 97).
 3. The member selects some members from the RCD_received list and answers positively (MUST98).
 4. The portal updates the RCD_sent and in_contact lists (MUST99).
 5. The member selects some members from the RCD_received list and answers negatively (MUST100).
@@ -220,13 +198,13 @@ Precondition: The user is logged in as member A
 
 • If the Status Page shown is not about member A, but rather about a different member B, the member lists S and R are not shown and steps 2, 3, 4, 5, 6 are not possible (MUST103).
 • Unless B has in_contact status, the contact details (full name, email address) are also not shown (MUST104).
-• 2b: The member takes another TTT. The portal stores the new result and uses it in place of the previous one (SHOULD105).
-• 2bb: The portal MAY106 store not just one, but rather several (or even all) previous results of TTT-takings. The member can list all previous results (with timestamps, in chronological order) and select one of them to be used as his or her ”official” result which the other members get to see.
+• 2b: The member takes another TTT. The portal stores the new result and uses it in place of the previous one (SHOULD 105).
+• 2bb: The portal MAY store not just one, but rather several (or even all) previous results of TTT-takings. The member can list all previous results (with timestamps, in chronological order) and select one of them to be used as his or her ”official” result which the other members get to see.
 
 2.6.3 Notes
 
 • Long member lists SHOULD107 be paginated.
-• The Status Page MAY108 actually be realized as multiple separate pages.
+• The Status Page MAY actually be realized as multiple separate pages.
 • Google Maps: Information about how to construct a suitable Google Maps URL can be found on the web (but not at Google). The most relevant parameters are z and ll.
 
 
@@ -289,7 +267,6 @@ searchForMembersGraphic (MUST124) performs the same search, but instead of retur
 Memberinfo objects, it returns the byte sequence of a GIF or PNG image file as described in Section
 2.5.3. The image is xSize pixels wide, ySize pixels high and indicates the values of xVariable along the horizontal axis and yVariable along the vertical axis; the variables are given by their names as described in Section 2.5.3.
 
-
 3.8 operations getMemberlist, getMemberlistGraphic
 
 getMemberlist (MUST125) realizes the core of the usecase 2.5. It retrieves the Memberinfo of	5 all members that have the given rcdStatus from the point of view of member username.
@@ -307,8 +284,8 @@ bers. Sending and positive answering is exactly the same: positive is true. Nega
 
 The user interface MUST128 conform to the above-mentioned requirements (as far as they are realized at all) in a sensible way with respect to the arrangement and markup of its elements and the labels, prompts and explanations that guide the user. Within those limits, the organization and design of the interface is left to the professional judgement of the participants.
 The userinterface SHOULD129  provide sufficient explanation of all uncommon concepts to guide a user who does not have prior knowledge about these topics. Make use of external links where needed. Do not include copyrighted material without permission.
-Elaborate graphical design (MAY130) is not important, but CSS SHOULD131 be used throughout to simplify future improvements.
-It would be nice if the user interface works even when Javascript is turned off in a user’s browser (MAY132).
+Elaborate graphical design (MAY 130) is not important, but CSS SHOULD be used throughout to simplify future improvements.
+It would be nice if the user interface works even when Javascript is turned off in a user’s browser (MAY 132).
 
 4.2 Browser compatibility
 
@@ -316,9 +293,5 @@ The portal MUST133 work fully with Firefox 1.5 and higher.
 • The portal MUST134 work fully with Internet Explorer 6 and higher.
 • The portal SHOULD135 work fully with Safari 2 and higher.
 • The portal SHOULD136 work fully with Opera 8 and higher.
-• The portal MAY137 work fully with other browsers such as Konqueror, Opera Mini, Lynx etc.
+• The portal may work fully with other browsers such as Konqueror, Opera Mini, Lynx etc.
 • If the portal relies on Javascript in the browser and Javascript is unavailable, it SHOULD138 either produce a clear message saying that the portal is not functional (and why) or fall back to reduced (but still useful) functionality.
-
-
-
-
