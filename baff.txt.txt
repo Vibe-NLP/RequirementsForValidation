@@ -1,0 +1,6 @@
+After inserting a suitable coin, the user shall choose a beverage and  select the amount of sugar.
+The machine shall offer, as beverages, Coffee and Cappuccino or Tea. 
+The machine shall always offer coffee. 
+A ringtone possibly has to be played after beverage delivery.
+After the beverage is taken, the machine returns idle.
+The British market requires  tea and excludes any ring tone. 
